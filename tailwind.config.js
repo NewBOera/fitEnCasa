@@ -3,14 +3,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: '#6028A5',
-        black: '#0F0F0FD9',
-        whitef: ' #0F0F0FD9',
+        primary: {
+          400: '#D90429',
+          500: '#FF0000',
+        },
       },
 
       fontFamily: {
-        Instrument: ['instrument-serif', 'sans-serif'],
-        Poppins: ['poppins', 'sans-serif'],
+        Albert: ['Albert Sans', 'sans-serif'],
       },
     },
   },

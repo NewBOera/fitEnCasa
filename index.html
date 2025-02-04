@@ -26,10 +26,13 @@
     <script src="/src/components/NavbarMobile.js" type="module"></script>
     <script src="/src/components/NavbarDesktop.js" type="module"></script>
     <script src="/src/components/Footer.js" type="module"></script>
+    <script src="/src/ui/booking/Form.js" type="module"></script>
 
     <!-- Sections -->
     <script src="/src/ui/home/Hero.js" type="module"></script>
     <script src="/src/ui/home/About.js" type="module"></script>
+    <script src="/src/ui/home/Register.js" type="module"></script>
+
   </head>
   <body>
     <!-- <div class="age-verification flex hidden" id="ageVerification">
@@ -47,14 +50,12 @@
     <navbar-desktop is-landing="true"></navbar-desktop>
 
     <main class="flex flex-col gap-10 md:gap-12 lg:gap-14">
-      <div id="hero-section">
+      <section id="hero-section" class="w-full">
         <hero-section></hero-section>
-      </div>
+      </section>
 
-      <after-hero-section></after-hero-section>
-
-      <div id="about-section">
-        <about-section></about-section>
+      <div class="mx-auto flex flex-col items-center gap-10 md:gap-12 lg:gap-14 xl:gap-20 w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] px-10 sm:px-12 md:px-16 lg:px-24">
+        <register-section></register-section>
       </div>
     </main>
 
