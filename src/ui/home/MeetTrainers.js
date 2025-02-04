@@ -41,7 +41,7 @@ export class MeetTrainers extends LitElement {
               <!-- Imagen del entrenador -->
               <img class="w-full object-cover rounded-3xl rounded-br-none" src="${trainer.image}" alt="Imagen de ${trainer.name}" />
               <!-- Capa oscura con el texto en la parte inferior -->
-              <div class="absolute bottom-0 w-full bg-black bg-opacity-85 text-white p-3 rounded-3xl rounded-br-none overflow-y-scroll md:h-[220px] lg:h-[250px]">
+              <div class="absolute bottom-0 w-full bg-black bg-opacity-85 text-white p-3 rounded-3xl rounded-br-none  md:h-[220px] lg:h-[250px]">
                 <h3 class="text-lg font-bold text-center uppercase">${trainer.name}</h3>
                 <p class=" text-sm font-normal mt-2 leading-normal text-center">${trainer.description}</p>
               </div>
