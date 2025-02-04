@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Booking</title>
+    <link rel="shortcut icon" href="/public/assets/footer/logo.webp" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/public/styles/globals.css" />
+    <link rel="stylesheet" href="/public/styles/output.css" />
+
+    <!-- Adobe Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/qlw2ops.css" />
+
+    <!-- Components -->
+    <script src="/src/components/NavbarMobile.js" type="module"></script>
+    <script src="/src/components/NavbarDesktop.js" type="module"></script>
+    <script src="/src/components/Footer.js" type="module"></script>
+    <script src="/src/ui/Form.js" type="module"></script>
+  </head>
+  <body>
+    <navbar-mobile is-landing="false"></navbar-mobile>
+    <navbar-desktop is-landing="false"></navbar-desktop>
+
+    <main id="booking" class="min-h-screen grid place-content-center">
+      <div
+        class="sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] w-full px-4 sm:px-6 md:px-8 lg:px-10 h-full flex flex-col items-center justify-center gap-2 md:gap-4 lg:gap-10 pt-[130px] lg:pt-[80px] lg:flex-row"
+      >
+        <article class="w-full lg:w-5/12 xl:w-4/12 text-white flex flex-col gap-6">
+          <h1 class="font-medium text-center text-xl lg:text-start md:text-2xl xl:text-3xl">Grab your slot for a memorable visit to Birmingham’s top casinos here!</h1>
+
+          <p class="text-center lg:text-start text-sm md:text-base xl:text-lg">
+            Offers won’t last for long. Make sure to book your visit today by leaving us your contact information. One of our professional agents will be happy to fine tune your slot reservation as
+            soon as possible.
+          </p>
+        </article>
+
+        <article class="w-full lg:w-7/12 xl:w-8/12 flex justify-center">
+          <div class="bg-[#F3F3F3] rounded-lg p-4 grid place-content-center max-w-[500px] lg:max-w-[1400px] sm:my-10 lg:my-20">
+            <booking-form></booking-form>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer-element in-landing="false"></footer-element>
+  </body>
+</html>

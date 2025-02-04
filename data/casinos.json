@@ -1,0 +1,50 @@
+[
+  {
+    "index": 1,
+    "casinoInfo": {
+      "title": "Top gaming venue in Birmingham",
+      "name": "Resorts World Casino",
+      "id": "Resorts_World_Casino",
+      "features": [
+        "A haven casino with over +100 games",
+        "Outdoor terrace with amazing views to Pendigo Lake",
+        "Boasting its signature casino’s Sports Bar",
+        "Smart casual is welcome as dress code",
+        "Guaranteed a warm and friendly service"
+      ],
+      "descriptions": {
+        "mainDescription": "Ideally located just minutes from Birmingham’s Airport, the Resorts World Casino is considered a slot machine haven with over 100 slot machines, and one of the largest casinos in the UK. It is simply your best option for your gaming entertainment and a memorable night out in Birmingham.",
+        "secondaryDescription": "Those looking for gaming action the Resorts World Casino is full with live table games like roulette, blackjack, poker and more. Boasting mouth-watering steaks, grazing plates and international dishes. Including a lively Sports Bar with mouth watering dishes, a sports café and bustling bar to sip fresh drinks."
+      },
+      "pricing": {
+        "starting": 893,
+        "upTo": 2677
+      },
+      "bestFor": "All inclusive venue",
+      "standOut": "Amazing views & plenty of casino games"
+    },
+    "ctaButton": "Obtain a special",
+    "gallery": [
+      {
+        "image": "/public/assets/gallery/casino-1/1.webp",
+        "metadata": "Casino gaming floor"
+      },
+      {
+        "image": "/public/assets/gallery/casino-1/2.webp",
+        "metadata": "Casino live games"
+      },
+      {
+        "image": "/public/assets/gallery/casino-1/3.webp",
+        "metadata": "Casino slot machines"
+      },
+      {
+        "image": "/public/assets/gallery/casino-1/4.webp",
+        "metadata": "Casino electronic games"
+      },
+      {
+        "image": "/public/assets/gallery/casino-1/5.webp",
+        "metadata": "Casino luxury gaming"
+      }
+    ]
+  }
+]
