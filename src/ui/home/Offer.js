@@ -53,28 +53,48 @@ export class Offer extends LitElement {
     ];
   }
 
-  // Permitir usar clases de Tailwind fuera del shadow DOM:
+  // Para usar Tailwind fuera de Shadow DOM
   createRenderRoot() {
     return this;
   }
 
+  /**
+   * Determina el "tamaño" (normal, wide, half, full) según el ID de la tarjeta.
+   * Ajusta esta lógica como prefieras.
+   */
+  getCardClass(id) {
+    const sizeMap = {
+      1: 'col-span-1 xl:col-start-1 xl:col-end-5 xl:row-start-1 xl:row-end-2',
+      2: 'col-span-1 xl:col-start-5 xl:col-end-7 xl:row-start-1 xl:row-end-2',
+      3: 'col-span-1 xl:col-span-6 xl:row-start-2 xl:row-end-3',
+      4: 'col-span-1 xl:col-span-6 xl:row-start-3 xl:row-end-4',
+      5: 'col-span-1 xl:col-start-3 xl:col-end-7 xl:row-start-4 xl:row-end-5',
+      6: 'col-span-1 xl:col-start-1 xl:col-end-3 xl:row-start-4 xl:row-end-5',
+      7: 'col-span-1 xl:col-span-6 xl:row-start-5 xl:row-end-6',
+    };
+    return sizeMap[id] || 'xl:col-span-2';
+  }
+
   renderOffersGrid() {
     return html`
-      <!-- Ajusta las columnas según tu diseño -->
-      <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 md:gap-12">
-        ${this.offersData.map(
-          offer => html`
-            <div class="relative w-full rounded-3xl shadow-lg overflow-hidden">
-              <!-- Imagen: ocupa todo el contenedor, con altura fija o mínima -->
-              <img class="w-full h-[240px] md:h-[240px] object-cover" src="${offer.image}" alt="Imagen de ${offer.name}" />
-              <!-- Overlay negro abajo, con texto blanco -->
+      <!-- En pantallas XL, tendremos 6 columnas. 
+           En menores, 1 sola columna (puedes ajustarlo si quieres 2 col. en MD). -->
+      <div class="grid grid-cols-1 xl:grid-cols-6 xl:grid-rows-5 gap-8 w-full md:gap-12">
+        ${this.offersData.map(offer => {
+          // Calcula el "size" y sus clases asociadas
+          const cardClass = this.getCardClass(offer.id);
+
+          return html`
+            <!-- Card -->
+            <div class="relative w-full rounded-3xl shadow-lg overflow-hidden ${cardClass}">
+              <img class="w-full h-[240px] md:h-[240px] object-cover xl:object-top" src="${offer.image}" alt="Imagen de ${offer.name}" />
               <div class="absolute bottom-0 rounded-3xl w-full bg-black bg-opacity-80 text-white p-4 flex flex-col gap-2">
                 <h3 class="text-sm font-black uppercase text-center">${offer.name}</h3>
                 <p class="text-xs sm:text-sm leading-snug text-center text-gray-200">${offer.description}</p>
               </div>
             </div>
-          `
-        )}
+          `;
+        })}
       </div>
     `;
   }
@@ -82,7 +102,7 @@ export class Offer extends LitElement {
   render() {
     return html`
       <section class="flex flex-col gap-8 items-center">
-        <h2 class="text-center text-lg lg:text-xl xl:text-2xl font-black uppercase">¡Descubre todo lo que te ofrecemos!</h2>
+        <h2 class="text-center text-lg lg:text-xl xl:text-2xl font-black uppercase">Descubre todo lo que te ofrecemos</h2>
         ${this.renderOffersGrid()}
       </section>
     `;
