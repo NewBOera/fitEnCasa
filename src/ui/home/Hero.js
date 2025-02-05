@@ -14,7 +14,7 @@ export class Hero extends LitElement {
       <style>
         #hero-section {
           min-height: 820px;
-          background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url('/public/assets/hero/hero.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url('/public/assets/hero/hero.webp');
           background-position: bottom;
           background-size: cover;
           background-repeat: no-repeat;
@@ -34,14 +34,14 @@ export class Hero extends LitElement {
         @media (min-width: 746px) {
           #hero-section {
             min-height: 900px;
-            background-image: url('/public/assets/hero/heroMd.png');
+            background-image: url('/public/assets/hero/heroMd.webp');
           }
         }
 
         @media (min-width: 1280px) {
           #hero-section {
             min-height: 1000px;
-            background-image: url('/public/assets/hero/heroLg.png');
+            background-image: url('/public/assets/hero/heroLg.webp');
           }
           .image-hero {
             display: block;
@@ -50,7 +50,7 @@ export class Hero extends LitElement {
       </style>
 
       <section id="hero-section" class="relative xl:pt-10">
-        <img class=" w-full xl:w-1/2 h-auto object-cover xl:-ml-40 " src="/public/assets/hero/navMd.png" alt="Logo" />
+        <img class=" w-full xl:w-1/2 h-auto object-cover xl:-ml-40 " src="/public/assets/hero/navMd.webp" alt="Logo" />
         <div
           class="mx-auto flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-20 w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] p-10 sm:px-12 md:px-16 lg:px-24 xl:grid xl:grid-cols-2"
         >

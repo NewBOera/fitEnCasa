@@ -13,7 +13,7 @@ export class Register extends LitElement {
     return html`
       <style>
         .form-bg {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg.webp');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -21,13 +21,13 @@ export class Register extends LitElement {
 
         @media (min-width: 768px) {
           .form-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg_md.png');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg_md.webp');
           }
         }
 
         @media (min-width: 1024px) {
           .form-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg_lg.png');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/public/assets/registerBg_lg.webp');
             background-size: contain;
           }
         }

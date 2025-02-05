@@ -14,7 +14,7 @@ export class Advice extends LitElement {
     return html`
       <style>
         .paper-bg {
-          background-image: url('/public/assets/paper.png');
+          background-image: url('/public/assets/paper.webp');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -22,13 +22,13 @@ export class Advice extends LitElement {
 
         @media (min-width: 480px) {
           .paper-bg {
-            background-image: url('/public/assets/paperMd.png');
+            background-image: url('/public/assets/paperMd.webp');
           }
         }
 
         @media (min-width: 768px) {
           .paper-bg {
-            background-image: url('/public/assets/paperLg.png');
+            background-image: url('/public/assets/paperLg.webp');
             /* background-size: contain; */
           }
         }

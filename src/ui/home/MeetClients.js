@@ -13,21 +13,21 @@ export class MeetClients extends LitElement {
         name: 'José Martínez',
         description:
           '"Nunca imaginé que podría obtener los mismos resultados de un gimnasio, pero entrenando desde casa. Las clases en línea de FitEnCasa me han permitido ajustarme a mi propio horario, y los entrenadores personalizados me motivan mucho. ¡Estoy más en forma que nunca!"',
-        image: '/public/assets/meetClients/client_joseM.png',
+        image: '/public/assets/meetClients/client_joseM.webp',
       },
       {
         id: 2,
         name: 'Patricia López',
         description:
           '"¡Me encanta entrenar con FitEnCasa! Las clases grupales son súper divertidas, y lo mejor es la energía de todos. Los entrenadores están siempre atentos y me han ayudado a superar mis límites. Lo recomiendo totalmente."',
-        image: '/public/assets/meetClients/client_patriciaL.png',
+        image: '/public/assets/meetClients/client_patriciaL.webp',
       },
       {
         id: 3,
         name: 'Carlos Pérez',
         description:
           '"Mi experiencia con FitEnCasa ha sido increíble. Me gusta el entrenamiento personalizado, ya que los planes están hechos específicamente para mí y mis objetivos. Además, siempre recibo apoyo y motivación de los entrenadores. ¡El cambio ha sido notable!"',
-        image: '/public/assets/meetClients/client_carlosP.png',
+        image: '/public/assets/meetClients/client_carlosP.webp',
       },
     ];
   }

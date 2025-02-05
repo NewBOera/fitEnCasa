@@ -1229,12 +1229,12 @@ video {
   padding-top: 1rem;
 }
 
-.pt-\[130px\] {
-  padding-top: 130px;
-}
-
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[130px\] {
+  padding-top: 130px;
 }
 
 .text-left {

@@ -26,7 +26,7 @@ export class About extends LitElement {
               para ti, sin importar lo ocupado que estés.
             </p>
           </div>
-          <img src="/public/assets/aboutUs.png" class=" mx-auto object-contain w-full max-w-[300px] md:max-w-[520px] -mt-12" alt="About Us image" title="About Us" />
+          <img src="/public/assets/aboutUs.webp" class=" mx-auto object-contain w-full max-w-[300px] md:max-w-[520px] -mt-12" alt="About Us image" title="About Us" />
         </section>
 
         <section class="flex flex-col lg:flex-row-reverse lg:justify-center lg:items-center gap-9 lg:gap-10">
@@ -43,7 +43,7 @@ export class About extends LitElement {
               <p>Ser la plataforma líder de entrenamiento online en Latinoamérica, ofreciendo una forma flexible y efectiva de mantenerse en forma desde casa.</p>
             </div>
           </div>
-          <img src="/public/assets/mision.png" class=" mx-auto object-contain w-full max-w-[300px] md:max-w-[520px] rounded-3xl rounded-br-none" alt="Vision image" title="Vision" />
+          <img src="/public/assets/mision.webp" class=" mx-auto object-contain w-full max-w-[300px] md:max-w-[520px] rounded-3xl rounded-br-none" alt="Vision image" title="Vision" />
         </section>
       </section>
     `;

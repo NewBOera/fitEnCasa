@@ -299,7 +299,7 @@ export class Footer extends LitElement {
     return html`
       <style>
         .footer-section {
-          background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/public/assets/footer/footer.png');
+          background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/public/assets/footer/footer.webp');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -307,13 +307,13 @@ export class Footer extends LitElement {
 
         /* @media (min-width: 746px) {
           .footer-section {
-            background-image: url('/public/assets/footer/footer.png');
+            background-image: url('/public/assets/footer/footer.webp');
           }
         }
 
         @media (min-width: 1280px) {
           .footer-section {
-            background-image: url('/public/assets/footer/footerBg.png');
+            background-image: url('/public/assets/footer/footerBg.webp');
           }
         } */
       </style>
