@@ -13,14 +13,14 @@ export class MeetTrainers extends LitElement {
         name: 'Ana García',
         description:
           'Es una entrenadora personal con amplia experiencia y un sólido conocimiento en fitness funcional y prevención de lesiones. Con un título en ciencias del deporte, Ana lleva más de 10 años ayudando a sus clientes, enfocándose en mejorar la movilidad, fuerza y salud general. Ella personaliza sus rutinas de ejercicios para satisfacer las necesidades únicas de cada persona, asegurándose de que se sientan apoyados en cada paso del camino.',
-        image: '/public/assets/trainer_anaG.png',
+        image: '/public/assets/meetTrainers/trainer_anaG.png',
       },
       {
         id: 2,
         name: 'Carlos Rodríguez',
         description:
           'Es un experto en fitness certificado, especializado en entrenamiento de pesas y acondicionamiento físico. Ha trabajado con atletas de diversos niveles, desde principiantes hasta profesionales, ayudándolos a alcanzar su máximo rendimiento. Carlos combina su conocimiento en kinesiología con su pasión por motivar a los clientes, haciendo que cada entrenamiento sea una experiencia emocionante y desafiante para sus estudiantes.',
-        image: '/public/assets/trainer_carlosR.png',
+        image: '/public/assets/meetTrainers/trainer_carlosR.png',
       },
     ];
   }
@@ -43,7 +43,7 @@ export class MeetTrainers extends LitElement {
               <!-- Capa oscura con el texto en la parte inferior -->
               <div class="absolute bottom-0 w-full bg-black bg-opacity-85 text-white p-3 rounded-3xl rounded-br-none  md:h-[220px] lg:h-[250px]">
                 <h3 class="text-lg font-bold text-center uppercase">${trainer.name}</h3>
-                <p class=" text-sm font-normal mt-2 leading-normal text-center">${trainer.description}</p>
+                <p class=" text-sm text-gray-200 font-normal my-2 leading-normal text-center">${trainer.description}</p>
               </div>
             </div>
           `
