@@ -9,3 +9,11 @@ div,
 article {
   scroll-margin-top: 110px;
 }
+
+.fondo-main {
+  min-height: 820px;
+  background-image: url('/public/assets/fondo.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

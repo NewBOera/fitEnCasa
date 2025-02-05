@@ -101,7 +101,7 @@ export class Offer extends LitElement {
 
   render() {
     return html`
-      <section class="flex flex-col gap-8 items-center">
+      <section class="flex flex-col gap-8 items-center pt-6">
         <h2 class="text-center text-lg lg:text-xl xl:text-2xl font-black uppercase">Descubre todo lo que te ofrecemos</h2>
         ${this.renderOffersGrid()}
       </section>
