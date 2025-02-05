@@ -33,7 +33,7 @@ export class Register extends LitElement {
         }
       </style>
       <article class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-20 rounded-3xl form-bg w-full">
-        <section class=" col-span-1 lg:col-start-2 w-[300px] sm:w-[380px] md:w-[440px] lg:gap-5 p-4 pb-20 lg:p-12 md:p-16">
+        <section class=" col-span-1 lg:col-start-2 w-full sm:w-[380px] md:w-[440px] lg:gap-5 p-4 pb-20 lg:p-12 md:p-16">
           <register-form></register-form>
         </section>
       </article>
