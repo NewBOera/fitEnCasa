@@ -42,6 +42,8 @@ export class Hero extends LitElement {
           #hero-section {
             min-height: 1000px;
             background-image: url('/public/assets/hero/heroLg.webp');
+
+            background-position: center;
           }
           .image-hero {
             display: block;
