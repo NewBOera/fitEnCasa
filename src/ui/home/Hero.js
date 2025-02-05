@@ -20,10 +20,14 @@ export class Hero extends LitElement {
           background-repeat: no-repeat;
         }
 
+        .image-hero {
+          display: none;
+        }
+
         .main-text {
           text-shadow: 4px 4px 6px #000;
         }
-        .gradient {
+        .gradientWhite {
           background: linear-gradient(to top, #ffffff, transparent);
         }
 
@@ -39,13 +43,14 @@ export class Hero extends LitElement {
             min-height: 1000px;
             background-image: url('/public/assets/hero/heroLg.png');
           }
+          .image-hero {
+            display: block;
+          }
         }
       </style>
 
-      <section id="hero-section" class="relative">
-        <img class=" md:hidden w-full h-auto object-cover mt-12 " src="/public/assets/hero/nav.png" alt="Logo" />
-        <img class="hidden md:block xl:hidden w-full h-auto object-cover mt-12 " src="/public/assets/hero/nav.png" alt="Logo" />
-        <img class="hidden xl:block w-1/2 h-auto object-cover 2xl:mt-12" src="/public/assets/hero/nav.png" alt="Logo" />
+      <section id="hero-section" class="relative xl:pt-10">
+        <img class=" w-full xl:w-1/2 h-auto object-cover xl:-ml-40 " src="/public/assets/hero/navMd.png" alt="Logo" />
         <div
           class="mx-auto flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-20 w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] p-10 sm:px-12 md:px-16 lg:px-24 xl:grid xl:grid-cols-2"
         >
@@ -57,7 +62,7 @@ export class Hero extends LitElement {
             </p>
           </div>
         </div>
-        <div class="hidden sm:block absolute w-full bottom-0 h-28 gradient py-4"></div>
+        <div class="hidden sm:block absolute w-full bottom-0 h-28 gradientWhite py-4"></div>
       </section>
     `;
   }
