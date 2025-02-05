@@ -1,38 +1,76 @@
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  const expires = 'expires=' + date.toUTCString();
-  document.cookie = name + '=' + value + ';' + expires + ';path=/';
-}
+const cookieManager = {
+  setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
+  },
 
-function getCookie(name) {
-  const cookieName = name + '=';
-  const cookies = document.cookie.split(';');
-  for (let i = 0; i < cookies.length; i++) {
-    let cookie = cookies[i].trim();
-    if (cookie.indexOf(cookieName) === 0) {
-      return cookie.substring(cookieName.length, cookie.length);
+  getCookie(name) {
+    const cookieName = `${name}=`;
+    const cookies = document.cookie.split(';');
+
+    for (let cookie of cookies) {
+      cookie = cookie.trim();
+      if (cookie.indexOf(cookieName) === 0) {
+        return cookie.substring(cookieName.length);
+      }
     }
-  }
-  return null;
-}
+    return null;
+  },
+};
 
-function verifyAge(isAdult) {
-  if (isAdult) {
-    document.getElementById('ageVerification').style.display = 'none';
-    setCookie('best10ukspots.com_age', 'true', 2);
-  } else {
-    window.location.href = 'https://www.google.com';
-  }
-}
+const modalManager = {
+  modals: {
+    ageVerification: { cookieName: 'FitEnCasa.com_age', expirationDays: 2 },
+    cookiesModal: { cookieName: 'FitEnCasa.com_cookies', expirationDays: 3 },
+  },
 
-window.onload = function () {
-  const ageVerified = getCookie('best10ukspots.com_age');
-  if (ageVerified !== 'true') {
-    const modal = document.getElementById('ageVerification');
+  init() {
+    for (const modalId in this.modals) {
+      const { cookieName } = this.modals[modalId];
+
+      if (cookieManager.getCookie(cookieName) !== 'true') {
+        this.showModal(modalId);
+      }
+    }
+  },
+
+  showModal(modalId) {
+    const modal = document.getElementById(modalId);
     if (modal) {
       modal.classList.remove('hidden');
       modal.style.display = 'flex';
     }
-  }
+  },
+
+  hideModal(modalId) {
+    const modal = document.getElementById(modalId);
+
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  },
+
+  verifyModal(modalId, isAccepted, redirectUrl = null) {
+    const modalConfig = this.modals[modalId];
+    if (!modalConfig) return;
+
+    const { cookieName, expirationDays } = modalConfig;
+
+    if (isAccepted) {
+      cookieManager.setCookie(cookieName, 'true', expirationDays);
+      this.hideModal(modalId);
+    } else {
+      if (redirectUrl) {
+        window.location.href = redirectUrl;
+        return;
+      }
+
+      this.hideModal(modalId);
+    }
+  },
+};
+
+window.onload = function () {
+  modalManager.init();
 };

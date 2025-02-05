@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>FitEnCasa</title>
 
     <link rel="stylesheet" href="https://use.typekit.net/qva8lkj.css" />
     <link rel="shortcut icon" href="/public/assets/navbar/logo.webp" type="image/x-icon" />
 
     <meta name="description" content="" />
-    <meta name="author" content="[change_NAME]" />
+    <meta name="author" content="FitEnCasa" />
     <meta name="created" content="January 2025" />
     <meta name="modified" content="January 2025" />
 
@@ -21,6 +21,9 @@
 
     <!-- <link rel="stylesheet" href="/public/styles/popup.css" />
     <script src="/public/scripts/popup.js"></script> -->
+
+    <link rel="stylesheet" href="/public/styles/popup.css" />
+    <script src="/public/scripts/popup.js"></script>
 
     <!-- Components -->
     <script src="/src/components/NavbarMobile.js" type="module"></script>
@@ -52,6 +55,18 @@
 
     <!-- <navbar-mobile is-landing="true"></navbar-mobile>
     <navbar-desktop is-landing="true"></navbar-desktop> -->
+
+    <div class="cookies-modal hidden" id="cookiesModal">
+      <article>
+        <h2 class="cookies-title">Aviso de uso de cookies:</h2>
+        <p class="cookies-text">Nuestro sitio web utiliza cookies para mejorar su experiencia de usuario. Por favor, elija sus preferencias.</p>
+      </article>
+
+      <div class="cookies-buttons">
+        <button class="btn-yes btn" onclick="modalManager.verifyModal('cookiesModal', true)">Acepto las cookies</button>
+        <button class="btn-no btn" onclick="modalManager.verifyModal('cookiesModal', false)">Rechazo las cookies</button>
+      </div>
+    </div>
 
     <main class="flex flex-col gap-10 md:gap-12 lg:gap-14">
       <section id="hero-section" class="w-full">
