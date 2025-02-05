@@ -13,51 +13,51 @@ export class Hero extends LitElement {
     return html`
       <style>
         #hero-section {
-          min-height: max-content;
-          padding: 0 0 50px 0;
+          min-height: 820px;
+          background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url('/public/assets/hero/hero.png');
+          background-position: bottom;
+          background-size: cover;
+          background-repeat: no-repeat;
         }
-        @media (min-width: 1524px) {
+
+        .main-text {
+          text-shadow: 4px 4px 6px #000;
+        }
+        .gradient {
+          background: linear-gradient(to top, #ffffff, transparent);
+        }
+
+        @media (min-width: 746px) {
           #hero-section {
-            height: calc(80vh);
-            min-height: 600px;
+            min-height: 900px;
+            background-image: url('/public/assets/hero/heroMd.png');
           }
         }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 1280px) {
           #hero-section {
-            height: calc(50vh);
-            min-height: 600px;
-            padding: 0;
+            min-height: 1000px;
+            background-image: url('/public/assets/hero/heroLg.png');
           }
         }
       </style>
 
-      <section id="hero-section" class="flex justify-center items-center">
+      <section id="hero-section" class="relative">
+        <img class=" md:hidden w-full h-auto object-cover mt-12 " src="/public/assets/hero/nav.png" alt="Logo" />
+        <img class="hidden md:block xl:hidden w-full h-auto object-cover mt-12 " src="/public/assets/hero/nav.png" alt="Logo" />
+        <img class="hidden xl:block w-1/2 h-auto object-cover 2xl:mt-12" src="/public/assets/hero/nav.png" alt="Logo" />
         <div
-          class="sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] w-full px-4 sm:px-6 md:px-8 lg:px-10 h-full flex flex-col justify-center items-center gap-8 mt-[130px] lg:mt-[80px]"
+          class="mx-auto flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-20 w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] p-10 sm:px-12 md:px-16 lg:px-24 xl:grid xl:grid-cols-2"
         >
-          <h1 class="text-3xl font-normal md:text-4xl xl:text-5xl">
-            <span class="text-purple">Top 7 Casinos in</span>
-            <br class="sm:hidden" />
-            Birmingham, UK
-          </h1>
+          <div class=" pt-10 md:pt-20 lg:pt-32 xl:pt-40">
+            <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black uppercase text-center text-white main-text ">Únete a nosotros para obtener la ventaja de ponerte en forma desde casa</h1>
 
-          <p class="text-center md:text-lg xl:text-xl md:w-[600px] lg:w-[800px] xl:w-[600px]">
-            Where the best gaming venues from the West Midlands come together. Explore the thrilling venues this UK city has to offer in one place!
-          </p>
-
-          <div class="flex gap-6">
-            <a href="#top-7-section" class="text-center gradient text-white rounded-2xl py-2 px-4 font-medium md:text-lg lg:text-xl lg:px-6 hover:scale-95 transition-all duration-200">
-              Explore the venues
-            </a>
-            <a
-              href="/booking.html"
-              class="text-center bg-white rounded-2xl py-2 px-4 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] font-medium md:text-lg lg:text-xl lg:px-6 hover:scale-95 transition-all duration-200"
-            >
-              Book a casino
-            </a>
+            <p class="text-sm md:text-base lg:text-lg 2xl:text-xl font-normal text-center text-white main-text mt-6 xl:mt-10">
+              Ahorra tiempo y dinero aprovechando esta oportunidad en línea de hacer ejercicio desde casa utilizando internet y tu teléfono inteligente o laptop
+            </p>
           </div>
         </div>
+        <div class="hidden sm:block absolute w-full bottom-0 h-28 gradient py-4"></div>
       </section>
     `;
   }
