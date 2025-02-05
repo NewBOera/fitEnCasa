@@ -41,12 +41,13 @@ export class MeetClients extends LitElement {
     return html`
       <!-- Contenedor general (usa grid o flex según prefieras) -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12  ">
-        ${this.trainersData.map(
-          trainer => html`
+        ${this.trainersData.map(trainer => {
+          const scaleClass = trainer.id === 2 ? 'xl:scale-[1.05]' : '';
+          return html`
             <!-- Tarjeta individual -->
             <div
               class="relative bg-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center mx-auto w-[300px] md:w-[600px] lg:w-[280px]
-            xl:w-[300px] 2xl:w-[340px]"
+            xl:w-[300px] 2xl:w-[340px] ${scaleClass}"
             >
               <!-- Imagen en la parte superior -->
               <img class="w-full h-auto md:h-[380px] lg:h-auto object-cover md:object-top" src="${trainer.image}" alt="Imagen de ${trainer.name}" />
@@ -57,8 +58,8 @@ export class MeetClients extends LitElement {
                 <h3 class="absolute bottom-0 pb-8 text-lg font-black uppercase bg-white w-full text-left">${trainer.name}</h3>
               </div>
             </div>
-          `
-        )}
+          `;
+        })}
       </div>
     `;
   }
