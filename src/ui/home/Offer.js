@@ -50,6 +50,12 @@ export class Offer extends LitElement {
         description: 'Únete a sesiones en vivo o a demanda con otras personas y disfruta de la energía de entrenar juntos. ¡Manténte motivado y conectado!',
         image: '/public/assets/offer/offer_7.webp',
       },
+      {
+        id: 8,
+        name: 'Clases Virtuales',
+        description: 'Accede a clases en vivo o a demanda con entrenadores expertos que te guiarán en cada paso del camino.',
+        image: '/public/assets/offer/offer_2_sm.webp',
+      },
     ];
   }
 
@@ -65,12 +71,13 @@ export class Offer extends LitElement {
   getCardClass(id) {
     const sizeMap = {
       1: 'col-span-1 xl:col-start-1 xl:col-end-5 xl:row-start-1 xl:row-end-2',
-      2: 'col-span-1 xl:col-start-5 xl:col-end-7 xl:row-start-1 xl:row-end-2',
+      2: 'col-span-1 xl:col-start-5 xl:col-end-7 xl:row-start-1 xl:row-end-2 hidden sm:!block xl:!hidden',
       3: 'col-span-1 xl:col-span-6 xl:row-start-2 xl:row-end-3',
       4: 'col-span-1 xl:col-span-6 xl:row-start-3 xl:row-end-4',
       5: 'col-span-1 xl:col-start-3 xl:col-end-7 xl:row-start-4 xl:row-end-5',
       6: 'col-span-1 xl:col-start-1 xl:col-end-3 xl:row-start-4 xl:row-end-5',
       7: 'col-span-1 xl:col-span-6 xl:row-start-5 xl:row-end-6',
+      8: 'col-span-1 row-start-2 xl:col-start-5 xl:col-end-7 xl:row-start-1 xl:row-end-2 sm:!hidden xl:!block xl:[&>img]:!object-bottom',
     };
     return sizeMap[id] || 'xl:col-span-2';
   }

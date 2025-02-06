@@ -644,6 +644,10 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.row-start-2 {
+  grid-row-start: 2;
+}
+
 .\!-m-px {
   margin: -1px !important;
 }
@@ -1433,6 +1437,10 @@ video {
     display: block !important;
   }
 
+  .sm\:\!hidden {
+    display: none !important;
+  }
+
   .sm\:w-\[380px\] {
     width: 380px;
   }
@@ -1851,8 +1859,16 @@ video {
     margin-top: 2.5rem;
   }
 
+  .xl\:\!block {
+    display: block !important;
+  }
+
   .xl\:grid {
     display: grid;
+  }
+
+  .xl\:\!hidden {
+    display: none !important;
   }
 
   .xl\:min-h-\[700px\] {
@@ -1971,6 +1987,13 @@ video {
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:\[\&\>img\]\:\!object-bottom>img {
+    -o-object-position: bottom !important;
+       object-position: bottom !important;
   }
 }
 
