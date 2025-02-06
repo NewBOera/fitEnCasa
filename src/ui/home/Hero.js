@@ -34,14 +34,14 @@ export class Hero extends LitElement {
         @media (min-width: 746px) {
           #hero-section {
             min-height: 900px;
-            background-image: url('/public/assets/hero/heroMd.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url('/public/assets/hero/heroMd.webp');
           }
         }
 
         @media (min-width: 1280px) {
           #hero-section {
             min-height: 1000px;
-            background-image: url('/public/assets/hero/heroLg.webp');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url('/public/assets/hero/heroXL.webp');
 
             background-position: center;
           }
