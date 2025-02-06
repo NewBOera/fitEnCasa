@@ -60,7 +60,7 @@ export class Hero extends LitElement {
             <h1 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black uppercase text-center text-white main-text ">Únete a nosotros para obtener la ventaja de ponerte en forma desde casa</h1>
 
             <p class="text-sm md:text-base lg:text-lg 2xl:text-xl font-normal text-center text-white main-text mt-6 xl:mt-10">
-              Ahorra tiempo y dinero aprovechando esta oportunidad en línea de hacer ejercicio desde casa utilizando internet y tu teléfono inteligente o laptop
+              Ahorra tiempo aprovechando esta oportunidad en línea de hacer ejercicio desde casa utilizando internet y tu teléfono inteligente o laptop
             </p>
           </div>
         </div>
