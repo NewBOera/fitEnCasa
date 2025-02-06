@@ -103,6 +103,10 @@ export class Offer extends LitElement {
     return html`
       <section class="flex flex-col gap-8 items-center pt-6">
         <h2 class="text-center text-lg lg:text-xl xl:text-2xl font-black uppercase">Descubre todo lo que te ofrecemos</h2>
+        <p class=" text-gray-800 text-base lg:text-lg 2xl:text-xl font-normal text-center">
+          En FitEnCasa, ofrecemos una experiencia integral de fitness en línea diseñada para ayudarte a mantenerte saludable y activo desde la comodidad de tu hogar. Esto es lo que puedes esperar al
+          unirte a nosotros:
+        </p>
         ${this.renderOffersGrid()}
       </section>
     `;

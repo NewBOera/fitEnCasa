@@ -52,7 +52,7 @@ export class Hero extends LitElement {
       </style>
 
       <section id="hero-section" class="relative xl:pt-10">
-        <img class=" w-full xl:w-1/2 h-auto object-cover xl:-ml-40 " src="/public/assets/hero/navMd.webp" alt="Logo" />
+        <img class=" w-full xl:w-1/2 h-auto object-cover xl:-ml-40 mt-12 xl:mt-0" src="/public/assets/hero/navMd.webp" alt="Logo" />
         <div
           class="mx-auto flex flex-col gap-10 md:gap-12 lg:gap-14 xl:gap-20 w-full sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1300px] p-10 sm:px-12 md:px-16 lg:px-24 xl:grid xl:grid-cols-2"
         >
@@ -64,7 +64,7 @@ export class Hero extends LitElement {
             </p>
           </div>
         </div>
-        <div class="hidden sm:block absolute w-full bottom-0 h-28 gradientWhite py-4"></div>
+        <div class=" hidden sm:!block z-30 absolute w-full bottom-0 h-28 gradientWhite py-4"></div>
       </section>
     `;
   }
